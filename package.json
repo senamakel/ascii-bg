@@ -5,9 +5,11 @@
   "main": "index.html",
   "scripts": {
     "start": "parcel index.html --open",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "build-gh": "parcel build index.html --public-url https://senamakel.github.io/ascii-bg/"
   },
   "dependencies": {
+    "gh-pages": "^6.1.1",
     "three": "0.138.0"
   },
   "devDependencies": {
