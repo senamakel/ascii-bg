@@ -1,15 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Three.js Experiments</title>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="/styles.dd855970.css">
-  <script src="/styles.dd855970.js"></script></head>
-
-  <body>
-    <div id="app"></div>
-
-    <script id="asc-frag1" type="x-shader/x-fragment">
+<!DOCTYPE html><html><head><title>Three.js Experiments</title><meta charset="UTF-8"><link rel="stylesheet" href="https://senamakel.github.io/ascii-bg/styles.e75dd867.css"></head><body> <div id="app"></div> <script id="asc-frag1" type="x-shader/x-fragment">
       // based on https://www.shadertoy.com/view/lsBXzD
       // which is nowadays a pixi.js ascii filter https://filters.pixijs.download/main/docs/PIXI.filters.AsciiFilter.html
 
@@ -76,8 +65,7 @@
             gl_FragColor = vec4(0., 0., 0., 0.);
           }
       }
-    </script>
-    <script id="asc-general" type="x-shader/x-vertex">
+    </script> <script id="asc-general" type="x-shader/x-vertex">
       attribute vec2 pos;
       uniform vec2 resolution;
 
@@ -85,11 +73,7 @@
           vec4 mvPosition = modelViewMatrix * vec4(position, 1.0 );
           gl_Position = projectionMatrix * mvPosition;
       }
-    </script>
-
-
-<div id="menu-shaders">
-  <script id="heightmapFragmentShader" type="x-shader/x-fragment">
+    </script> <div id="menu-shaders"> <script id="heightmapFragmentShader" type="x-shader/x-fragment">
   #include <common>
   uniform vec2 mousePos;
   uniform float mouseSize;
@@ -116,8 +100,7 @@
     gl_FragColor = heightmapValue;
     // gl_FragColor += heightmapValue * 0.95;
   }
-  </script>
-  <script id="smoothFragmentShader" type="x-shader/x-fragment">
+  </script> <script id="smoothFragmentShader" type="x-shader/x-fragment">
   uniform sampler2D texture;
   void main()	{
     vec2 cellSize = 1.0 / resolution.xy;
@@ -131,8 +114,7 @@
     textureValue /= 5.0;
     gl_FragColor = textureValue;
   }
-  </script>
-  <script id="readWaterLevelFragmentShader" type="x-shader/x-fragment">
+  </script> <script id="readWaterLevelFragmentShader" type="x-shader/x-fragment">
   uniform vec2 point1;
   uniform sampler2D texture;
   float shift_right( float v, float amt ) {
@@ -181,8 +163,7 @@
         gl_FragColor = encode_float( 0.0 );
       }
     }
-    </script>
-    <script id="waterVertexShader" type="x-shader/x-vertex">
+    </script> <script id="waterVertexShader" type="x-shader/x-vertex">
     uniform sampler2D heightmap;
     #define PHONG
     varying vec3 vViewPosition;
@@ -234,15 +215,7 @@
         #include <envmap_vertex>
         #include <shadowmap_vertex>
       }
-      </script>
-
-
-
-
-
-
-
-      <script id="waterVertexDots" type="x-shader/x-vertex">
+      </script> <script id="waterVertexDots" type="x-shader/x-vertex">
       uniform sampler2D heightmap;
       uniform float size;
       uniform float scale;
@@ -298,13 +271,7 @@
           #include <envmap_vertex>
           #include <shadowmap_vertex>
         }
-        </script>
-
-
-
-
-
-        <script id="waterVertexDotsFrag" type="x-shader/x-vertex">
+        </script> <script id="waterVertexDotsFrag" type="x-shader/x-vertex">
         uniform vec3 diffuse;
         uniform float opacity;
         #include <common>
@@ -329,9 +296,7 @@
           #include <fog_fragment>
           #include <premultiplied_alpha_fragment>
         }
-        </script>
-
-        <script type="x-shader/x-vertex" id="vertexshader">
+        </script> <script type="x-shader/x-vertex" id="vertexshader">
 
         varying vec2 vUv;
 
@@ -343,9 +308,7 @@
 
         }
 
-        </script>
-
-        <script type="x-shader/x-fragment" id="fragmentshader">
+        </script> <script type="x-shader/x-fragment" id="fragmentshader">
 
         uniform sampler2D baseTexture;
         uniform sampler2D bloomTexture;
@@ -358,10 +321,4 @@
 
         }
 
-        </script>
-
-    <div id="container"></div>
-
-    <script src="/src.a2b27638.js"></script>
-  </div></body>
-</html>
+        </script> <div id="container"></div> <script src="https://senamakel.github.io/ascii-bg/src.40b2fa18.js"></script> </div></body></html>
